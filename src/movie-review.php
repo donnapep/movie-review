@@ -27,7 +27,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-  die;
+	die;
 }
 
 /**
@@ -35,8 +35,8 @@ if ( ! defined( 'WPINC' ) ) {
  * This action is documented in includes/class-movie-review-activator.php
  */
 function activate_movie_review() {
-  require_once plugin_dir_path( __FILE__ ) . 'includes/class-movie-review-activator.php';
-  Movie_Review_Activator::activate();
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-movie-review-activator.php';
+	Movie_Review_Activator::activate();
 }
 
 /**
@@ -44,8 +44,8 @@ function activate_movie_review() {
  * This action is documented in includes/class-movie-review-deactivator.php
  */
 function deactivate_movie_review() {
-  require_once plugin_dir_path( __FILE__ ) . 'includes/class-movie-review-deactivator.php';
-  Plugin_Name_Deactivator::deactivate();
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-movie-review-deactivator.php';
+	Plugin_Name_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_movie_review' );
@@ -68,8 +68,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-movie-review.php';
  */
 function run_movie_review() {
 
-  $plugin = new Movie_Review();
-  $plugin->run();
+	$plugin = new Movie_Review();
+	$plugin->run();
 
 }
 run_movie_review();
